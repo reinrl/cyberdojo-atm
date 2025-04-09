@@ -17,7 +17,7 @@ const actions = [
 ];
 
 function izzAllDigits(str) {
-  const regex = /^[0-9]+$/;
+  const regex = /^\d+$/;
 
   return regex.test(str);
 }
