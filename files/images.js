@@ -93,4 +93,4 @@ const images = [
   "Zipper",
 ];
 
-module.exports = images;
+export default images;

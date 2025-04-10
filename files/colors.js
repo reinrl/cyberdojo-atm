@@ -18,4 +18,4 @@ const colors = [
   "Aqua",
 ];
 
-module.exports = colors;
+export default colors;

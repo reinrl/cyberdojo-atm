@@ -1,7 +1,7 @@
 "use strict";
 
-const ATM = require("./automatic-atm-machine");
-const DebitCard = require("./DebitCard");
+import ATM from "./automatic-atm-machine";
+import DebitCard from "./DebitCard";
 
 const validCard = new DebitCard("2918 0475 0232 5515", "vizza", "123456", [
   "Ladder",
@@ -144,7 +144,8 @@ describe("validateEnteredPin", () => {
 
   myInvalidCases.forEach((invalidCase, idx) => {
     it(`identifies invalid card numbers (scenario #${idx})`, () => {
-      const atm = new ATM();expect(atm.swipe(validCard).display).toEqual("Enter Pin:");
+      const atm = new ATM();
+      expect(atm.swipe(validCard).display).toEqual("Enter Pin:");
       invalidCase.getPin().forEach((pinChar, pinIdx) => {
         expect(atm.enterNewPinChar(pinChar).pinDisplay).toEqual(
           "$".repeat(pinIdx + 1)

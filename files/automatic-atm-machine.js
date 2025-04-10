@@ -1,6 +1,6 @@
 "use strict";
-const images = require("./images.js");
-const colors = require("./colors.js");
+import images from "./images.js";
+import colors from "./colors.js";
 const validCarriers = [
   "vizza",
   "mazztercard",
@@ -102,4 +102,4 @@ class ATM {
   }
 }
 
-module.exports = ATM;
+export default ATM;

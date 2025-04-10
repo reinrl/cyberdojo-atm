@@ -23,4 +23,4 @@ class DebitCard {
   }
 }
 
-module.exports = DebitCard;
+export default DebitCard;
